@@ -36,7 +36,7 @@ set colorcolumn=120
     endif
   " }
 
-  " Section: stsln {
+  " Section: status {
   if has('statusline')
       set laststatus=2
 
@@ -83,6 +83,7 @@ autocmd FocusLost * silent! wall
 "}
 
 " Section: basic mapping {
+imap jk <Esc>
 
 "Remove empty lines
 nnoremap <C-c> :g/^$/d<CR>
@@ -128,7 +129,6 @@ Plug 'junegunn/vim-easy-align'
 Plug 'tpope/vim-surround'
 Plug 'editorconfig/editorconfig-vim' "editorconfig
 Plug 'tpope/vim-fugitive' "Git
-Plug 'tpope/vim-surround'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-repeat' "Repeat
 Plug 'tpope/vim-obsession' " Session
@@ -136,11 +136,11 @@ Plug 'tpope/vim-commentary' " gcc
 Plug 'nathanaelkane/vim-indent-guides' "indent
 Plug 'Yggdroot/indentLine' "indent
 Plug 'mattn/emmet-vim' "HTML
-Plug 'SirVer/ultisnips'  "vim-snippets must install to ultisnips work
 Plug 'honza/vim-snippets'
 Plug 'christoomey/vim-system-copy'
 Plug 'christoomey/vim-sort-motion'
 Plug 'godlygeek/tabular'
+"Plug 'SirVer/ultisnips'  "vim-snippets must install to ultisnips work
 "Plug 'inkarkat/vim-SpellCheck'
 "Plug 'b4b4r07/vim-sqlfmt'
 "Plug 'mattn/vim-sqlfmt'
@@ -150,13 +150,13 @@ call plug#end()
 
 " Section: plugin config {
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-"" If you want :UltiSnipsEdit to split your window.
-let g:UltiSnipsEditSplit="vertical"
-let g:UltiSnipsSnippetsDir = "~/.vim/plugged/vim-snippets/UltiSnips"
-let g:UltiSnipsSnippetDirectories=['UltiSnips']
+"let g:UltiSnipsExpandTrigger="<tab>"
+"let g:UltiSnipsJumpForwardTrigger="<c-b>"
+"let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+""" If you want :UltiSnipsEdit to split your window.
+"let g:UltiSnipsEditSplit="vertical"
+"let g:UltiSnipsSnippetsDir = "~/.vim/plugged/vim-snippets/UltiSnips"
+"let g:UltiSnipsSnippetDirectories=['UltiSnips']
 
  " Fugitive shortcuts {
  if isdirectory(expand("~/.vim/plugged/vim-fugitive/"))
@@ -376,5 +376,8 @@ let g:netrw_altv = 1
 if has('python3')
   silent! python3 1
 endif
+
+"folding
+let g:xml_syntax_folding=1
 
 " vim: set et tw=79 foldmarker={,} foldlevel=0 foldmethod=marker spell:
