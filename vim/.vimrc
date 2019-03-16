@@ -136,10 +136,10 @@ Plug 'tpope/vim-commentary' " gcc
 Plug 'nathanaelkane/vim-indent-guides' "indent
 Plug 'Yggdroot/indentLine' "indent
 Plug 'mattn/emmet-vim' "HTML
-Plug 'honza/vim-snippets'
 Plug 'christoomey/vim-system-copy'
 Plug 'christoomey/vim-sort-motion'
 Plug 'godlygeek/tabular'
+"Plug 'honza/vim-snippets'
 "Plug 'SirVer/ultisnips'  "vim-snippets must install to ultisnips work
 "Plug 'inkarkat/vim-SpellCheck'
 "Plug 'b4b4r07/vim-sqlfmt'

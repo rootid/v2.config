@@ -6,6 +6,37 @@ map ,c1 :call JCommentWriter()<CR>
 "for xml
 "set foldmethod=syntax
 "let g:xml_syntax_folding=1
+"
+"Clean formatting
+"1. Remove \n }
+"g/^$\n}/s/$\n}/}/g
+
+"accountNumber to account number
+":s/\<\u\|\l\u/\= join(split(tolower(submatch(0)), '\zs'), ' ')/g
+
+"update to Update
+"%s/\/\/ \(\w\)/\/\/ \u\1/g
+
+"Add setter from field
+"'a,'bs/\(\w\+\) =\p\+/approvedMessageDTO.set\u\1(\1);/g
+
+"Enum w/ docs
+":'a,'bs/\(\p\+\)\((\p\+\)/\/**\r * The \1 \r *\/\r\1\2/g
+
+"fields to mockFields
+"%s/\(private \w\+\) \(\w\+\)/\1 mock\u\2/g
+"Mock w/ docs
+":'a,'bs/\(private \w\+ \)mock\(\w\+\);/\/**\r * The mock for {@link \2} \r *\/\r\1mock\2;/g
+
+"Java docs for class
+"'a,'bs/\(private \w\+ \)\(\w\+\);/\/**\r * The \2 \r *\/\r\1\2;/g
+
+"Param
+"'a,'b s/\(@param \)\(\w\+$\)/\1\2 the \2/g
+
+"Change to final
+"'a,'bs/\(^\s\+\)\(\w\+\)/\1final \2/g
+
 
 map ,s1 :%s/",\(\S\+\)/", \1/g<CR> "‘,’ is not followed by whitespace.
 map ,s2 :%s/for(/for (/g<CR> "‘for’ is not followed by whitespace.
@@ -15,9 +46,13 @@ map ,s5 :%s/\(\w\+\)\(\<\)\(\w\+\)/\1 \2 \3/g<CR> ” < is not followed by white
 map ,s6 :%s/,\(\S\+\)/, \1/g<CR> "‘,’ is not followed by whitespace.
 map ,s7 :%s/catch(/catch (/g<CR> "‘catch’ is not followed by whitespace.
 map ,s8 :%s/+"/+ "/g<CR> "‘+’ is not followed by whitespace.
+
+"'a,'bs/\(^\s\+\)\(\w\+\)/\1final \2/g #Add final prefix to all vars
+"'a,'b s/\(@param \)\(\w\+$\)/\1\2 the \2/g "Add param
 map ,s9 :%s/){/) {/g<CR> "‘{’ is not followed by whitespace.
 map ,c3 :%s/\(@param \)\(\w\+$\)/\1\2 the \2/g "Add @param xyz to @param xyz the xyz
 map ,c6 :%s/^\s*$\n^}/}/g<CR> "last empty record
+map ,c7 :s/\([A-Z]\)/ \l\1/g<CR> "convert LoanId to loan id
 
 "single space between words
 map ,c5 :%s/\(\w\+\s\)\s\+/\1/g<CR>

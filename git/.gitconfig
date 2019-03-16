@@ -29,7 +29,8 @@
     rv = remote -v
     rc = remote rename
     rr = remote rm
-    p = push
+    lr = ls-remote
+    p  = push
   # }
 
   #Start dev {
@@ -37,6 +38,12 @@
     co = checkout
     cob = checkout -b
     ga = add
+
+    # List all untracked/added/updated files
+    ls = "!git status --porcelain | awk '{if($1==\"M\" || $1==\"A\" || $1==\"??\") {print $2}}'"
+
+    # List all deleted files
+    ld = "!git status --porcelain | awk '{if($1==\"D\") {print $2}}'"
 
     # Remove branches that have already been merged with master
     # a.k.a. ‘delete merged’
@@ -101,8 +108,6 @@
   #}
 
   del = "git status | grep 'deleted' | cut -d ':' -f2 | xargs git rm"
-  #ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
-  ls = ls-files --other --modified --exclude-standard
   #Git commited files with username
   lf = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
   #Git log with dates eg git lds -4
