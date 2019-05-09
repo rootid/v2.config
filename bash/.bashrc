@@ -31,6 +31,8 @@ fi;
 
 source ~/aliases.sh
 source ~/git-completion.bash
+source ~/network.sh
+source ~/wunderline_helper.sh
 #For work remove
 source ~/work.sh
 
