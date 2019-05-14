@@ -8,7 +8,7 @@ Thumbs.db
 .envrc
 .editorconfig
 myvim.rc
-*.dat
+*.out
 
 # For local dev
 fix.out

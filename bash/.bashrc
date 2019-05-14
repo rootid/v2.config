@@ -48,6 +48,16 @@ GIT_HUB_WRAPPER_MAN=$HOME/new-wave/git-hub/man
 export PATH="$GIT_HUB_WRAPPER_LIB:$PATH"
 export MANPATH="$GIT_HUB_WRAPPER_MAN:$MANPATH"
 
+#https://blog.jez.io/cli-code-review/
+#For Git stat and files
+export REVIEW_BASE=master
+# Review between 'ups/feature-US1125790-FIX-DB' and the current branch
+#export REVIEW_BASE=ups/feature-US1125790-FIX-DB git stat
+# Review changes made by the last commit of this branch:
+#REVIEW_BASE=HEAD^ git stat
+#For review use git review or git reviewone
+#REVIEW_BASE=master git review
+
 source /usr/local/opt/autoenv/activate.sh
 
 # vim: ai ts=2 sw=2 et sts=2 ft=sh

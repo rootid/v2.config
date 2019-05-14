@@ -1,0 +1,64 @@
+"http://web.archive.org/web/20041125025209/http://linux.cis.monroeccc.edu/~paulrsm/6502/MNSNUS.HTM
+"equal-length abbreviations
+"rely on the more uncommon letters (J's, Q's, X's, and Z's) in your abbreviation
+
+iabbrev ad address
+iabbrev ak acknowledge
+iabbrev cl clear
+iabbrev cp copy
+iabbrev cr create
+iabbrev cu current
+iabbrev cv convert
+iabbrev da disable
+iabbrev db debug
+iabbrev dc decrement
+iabbrev dl delete
+iabbrev dt date
+iabbrev dw day of week
+iabbrev ea enable
+iabbrev eo end of
+iabbrev er error
+iabbrev ex exit
+iabbrev fi file
+iabbrev fl flag
+iabbrev fp floating point value
+iabbrev ic increment
+iabbrev ip input
+iabbrev ir interrupt
+iabbrev is insert
+iabbrev iv interval, span of time
+iabbrev ix index
+iabbrev iz initialize
+iabbrev ln length
+iabbrev ls list
+iabbrev me menu
+iabbrev ml mailing label
+iabbrev mn minimum
+iabbrev mo mode
+iabbrev ms message
+iabbrev mv move
+iabbrev mx maximum
+iabbrev na ame
+iabbrev op output
+iabbrev ph phone number
+iabbrev pk pack
+iabbrev pn pointer
+iabbrev pr prompt
+iabbrev pu purge
+iabbrev pv previous
+iabbrev qu queue
+iabbrev rc receive
+iabbrev rd read
+iabbrev re record
+iabbrev se set
+iabbrev sk stack
+iabbrev so sort
+iabbrev sr search
+iabbrev sv save
+iabbrev tb table
+iabbrev td time of day
+iabbrev tk task
+iabbrev up unpack
+iabbrev wr write
+iabbrev wt wait
+iabbrev xm transmit
