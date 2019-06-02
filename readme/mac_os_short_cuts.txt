@@ -1,0 +1,2 @@
+-- Unlock the screen
+cmd+fn+delete

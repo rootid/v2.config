@@ -8,3 +8,4 @@
 :au FileType java :iabbrev cls Class
 :au FileType java :iabbrev ctor The Constructor
 :au FileType java :iabbrev ins instance
+:au FileType java :iabbrev toa the object array

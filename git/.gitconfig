@@ -126,8 +126,8 @@
 
 
   #Merge diff {
-    os = "!f() { git co --ours $@ && git add $@; }; f"
-    ts = "!f() { git co --theirs $@ && git add $@; }; f"
+    accept-ours = "!f() { [ -z \"$@\" ] && set - '.'; git checkout --ours -- \"$@\"; git add -u -- \"$@\"; }; f"
+    accept-theirs = "!f() { [ -z \"$@\" ] && set - '.'; git checkout --theirs -- \"$@\"; git add -u -- \"$@\"; }; f"
   #}
 
   # list files which have changed since REVIEW_BASE

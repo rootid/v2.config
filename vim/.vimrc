@@ -142,12 +142,12 @@ Plug 'christoomey/vim-sort-motion'
 Plug 'godlygeek/tabular'
 Plug 'airblade/vim-gitgutter'
 Plug 'morhetz/gruvbox'
-"Plug 'honza/vim-snippets'
-"Plug 'SirVer/ultisnips'  "vim-snippets must install to ultisnips work
 "Plug 'inkarkat/vim-SpellCheck'
 "Plug 'b4b4r07/vim-sqlfmt'
 "Plug 'mattn/vim-sqlfmt'
 
+"Plug 'honza/vim-snippets'
+"Plug 'SirVer/ultisnips'  "vim-snippets must install to ultisnips work
 call plug#end()
 " }
 

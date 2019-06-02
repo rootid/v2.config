@@ -47,12 +47,19 @@ function task_during_work() {
   today_dd_mm=`date +"%m/%d"`
   time_="\"$today_dd_mm 11:15AM\""
   gcalcli add --title 'Do kohm' --where 5th --when "$time_" --duration 10 --description 'It is going to be exciting!' --reminder 1
+
+  time_="\"$today_dd_mm 11:30AM\""
+  gcalcli add --title 'Run newsboat systems' --where 5th --when "$time_" --duration 10 --description 'It is going to be exciting!' --reminder 1
+
   time_="\"$today_dd_mm 1:30PM\""
   gcalcli add --title 'Do kohm' --where 5th --when "$time_" --duration 10 --description 'It is going to be exciting!' --reminder 1
   time_="\"$today_dd_mm 3:30PM\""
   gcalcli add --title 'Do kohm' --where 5th --when "$time_" --duration 10 --description 'It is going to be exciting!' --reminder 1
   time_="\"$today_dd_mm 4:00PM\""
   gcalcli add --title 'Do code/design review' --where focus --when "$time_" --duration 10 --description 'It is going to be exciting!' --reminder 1
+
+  time_="\"$today_dd_mm 9:15PM\""
+  gcalcli add --title 'Do Meditation' --where focus --when "$time_" --duration 10 --description 'It is going to be exciting!' --reminder 1
 }
 
 task_during_work
